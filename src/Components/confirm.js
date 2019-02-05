@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
+import Menu from './menu'
 import {List,ListItem} from 'material-ui/List'
 import RaisedButton from 'material-ui/RaisedButton';
 export default class FormUserDetails extends Component {
@@ -18,7 +18,7 @@ export default class FormUserDetails extends Component {
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar title = "Confirm User Data"/>
+          <Menu tittle='Confirm'/>
           <List>
             <ListItem
             primaryText='Last Name'
@@ -66,6 +66,6 @@ export default class FormUserDetails extends Component {
 }
 const styles ={
   button:{
-    margin: 50
+    margin: 10
   }
 }

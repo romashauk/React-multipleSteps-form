@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import Menu from './menu';
 export default class FormUserDetails extends Component {
   continue = e =>{
     e.preventDefault();
@@ -10,17 +10,17 @@ export default class FormUserDetails extends Component {
   }
   render() {
     const{values,handleChange}=this.props;
-    
     return (
       <MuiThemeProvider>
         <React.Fragment>
-          <AppBar title = "Enter User Details"/>
+          <Menu tittle='Form User Details'/>
           <TextField
           hintText='Enter Your First Name'
            floatingLabelText='First Name'
           onChange = {handleChange('firstName')}
           defaultValue={values.firstName}
           />
+          
           <br/>
           <TextField
           hintText='Enter Your Last Name'
@@ -49,6 +49,6 @@ export default class FormUserDetails extends Component {
 }
 const styles ={
   button:{
-    margin: 50
+    margin: 50,
   }
 }
